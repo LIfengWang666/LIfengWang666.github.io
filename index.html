@@ -18,7 +18,8 @@
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" hidden>Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#interests">Academic interests</a>
+        <a href="#work">Selected work</a>
+        <a href="#interests">Interests</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -29,12 +30,23 @@
       <div class="profile-intro">
         <h1 id="profile-title">LIfengWang666</h1>
         <p class="profile-field">Networking and Distributed Computing</p>
-        <p>I study how network protocols support everyday applications and how distributed systems divide work across machines. I use small implementations and packet traces to connect what I observe with what each protocol specifies.</p>
+        <p>I study how network protocols support everyday applications and how distributed systems divide work across machines. I use implementations and measured evidence to connect theory with what a system actually does.</p>
       </div>
-      <aside class="profile-details" aria-labelledby="profile-links">
-        <h2 id="profile-links">Profile</h2>
-        <a href="https://github.com/LIfengWang666">GitHub <span aria-hidden="true">↗</span></a>
+      <aside class="profile-details" aria-labelledby="profile-method">
+        <h2 id="profile-method">Study approach</h2>
+        <p>Build a small system, observe its behaviour, and account for what the measurements can show.</p>
       </aside>
+    </section>
+
+    <section class="section work" id="work" aria-labelledby="work-title" tabindex="-1">
+      <h2 id="work-title">Selected work</h2>
+      <article class="project">
+        <div>
+          <h3>Observing an HTTPS visit</h3>
+          <p>I built this site as a study in deployment and network measurement. DNS lookups, route probes and packet traces show different parts of a visit to the same address.</p>
+        </div>
+        <a href="https://github.com/LIfengWang666/LIfengWang666.github.io">Website source <span aria-hidden="true">↗</span></a>
+      </article>
     </section>
 
     <section class="section" id="interests" aria-labelledby="interests-title" tabindex="-1">
@@ -58,7 +70,7 @@
   </main>
 
   <footer class="container page-footer">
-    <p>LIfengWang666</p>
+    <p>Academic profile · LIfengWang666</p>
     <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
   </footer>
 </body>

@@ -1,10 +1,11 @@
 :root {
   color-scheme: light;
-  --paper: #fafaf8;
+  --paper: #fcfbf7;
   --ink: #1e252d;
   --muted: #4d5963;
   --accent: #243c59;
   --rule: #cbd1d6;
+  --panel: #edf0f2;
   --serif: "Spectral", Georgia, serif;
   --sans: "Source Sans 3", "Segoe UI", sans-serif;
 }
@@ -44,7 +45,7 @@ a:hover {
 }
 
 .container {
-  width: min(64rem, 100% - 4rem);
+  width: min(63rem, 100% - 4rem);
   margin-inline: auto;
 }
 
@@ -106,10 +107,10 @@ a:hover {
 
 .profile {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(9rem, 12rem);
-  align-items: end;
-  gap: 2.75rem;
-  padding-block: clamp(2.5rem, 6.5vw, 5.25rem) 3rem;
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 16rem);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  padding-block: clamp(2.5rem, 6vw, 4.75rem) 3rem;
 }
 
 h1 {
@@ -132,13 +133,19 @@ h1 {
 }
 
 .profile-details {
-  padding: 0 0 0.2rem 1.4rem;
-  border-left: 1px solid var(--rule);
+  padding: 1.25rem 1.4rem;
+  border-left: 2px solid var(--accent);
+  background: var(--panel);
 }
 
 .profile-details h2 {
-  margin-bottom: 0.4rem;
-  font: 650 0.88rem/1.4 var(--sans);
+  margin-bottom: 0.45rem;
+  font: 650 0.92rem/1.4 var(--sans);
+}
+
+.profile-details p {
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
 .section {
@@ -149,6 +156,28 @@ h1 {
 .section h2 {
   font: 400 clamp(1.6rem, 3vw, 2.15rem)/1.2 var(--serif);
   letter-spacing: -0.035em;
+}
+
+.project {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem 3rem;
+  margin-top: 1rem;
+}
+
+.project h3 {
+  font: 650 1.08rem/1.45 var(--sans);
+}
+
+.project p {
+  max-width: 66ch;
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+
+.project a {
+  flex-shrink: 0;
 }
 
 .interests-list {
@@ -204,8 +233,8 @@ h1 {
     gap: 1.45rem;
   }
 
-  .profile-details {
-    padding-left: 1rem;
+  .project {
+    flex-direction: column;
   }
 
   .interest {
