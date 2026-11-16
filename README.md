@@ -1,7 +1,7 @@
-# Personal page for LIfengWang666
+# Academic profile for LIfengWang666
 
-This English-language page introduces the networking and distributed computing topics I am studying. It uses plain HTML, CSS and JavaScript. The navigation stays available with JavaScript disabled.
+This English-language page introduces my interests in computer networking and distributed computing. It uses the Week 6 lab structure with HTML, CSS, JavaScript and local assets. The page uses JavaScript for the narrow-screen menu. Its navigation links remain available when scripts are disabled.
 
-Run `python -m http.server 8000` from this directory to preview the page at `http://localhost:8000`. For a GitHub Pages user site, use this directory's contents at the repository root and select `main` and `/(root)` as the publishing source.
+Run `python -m http.server 8000` from this directory to preview the page at `http://localhost:8000`. For GitHub Pages, publish these files from the root of the user-site repository.
 
-The decorative favicon and the website diagram were made for this page. All visual resources needed to display the page are served from the site itself.
+The favicon was made for this page. All resources are served from the site.

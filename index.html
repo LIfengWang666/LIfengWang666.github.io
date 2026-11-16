@@ -3,76 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="LIfengWang666's personal page about networking, distributed computing, and learning by building.">
-  <title>LIfengWang666 — Personal Page</title>
+  <meta name="description" content="LIfengWang666's academic interests in computer networking and distributed computing.">
+  <title>LIfengWang666 | Academic Profile</title>
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" id="top">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="#top"><span class="brand-mark" aria-hidden="true"></span>LIfengWang666</a>
+
+  <header class="page-header" id="top">
+    <div class="container header-content">
+      <a class="site-name" href="#top">LIfengWang666</a>
       <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" hidden>Menu</button>
-      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="#about">About</a>
-        <a href="#interests">Interests</a>
+        <a href="#interests">Academic interests</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap" id="main">
-    <section class="intro" id="about" aria-labelledby="intro-title">
-      <div class="intro-copy">
-        <p class="handle">@LIfengWang666</p>
-        <h1 id="intro-title">Networking &amp;<br>distributed<br class="desktop-break"> computing.</h1>
-        <p class="intro-text">I’m learning what happens between a click and a response, and how computers divide a job into pieces they can work on together.</p>
-        <a class="button" href="https://github.com/LIfengWang666">View my GitHub <span aria-hidden="true">↗</span></a>
+  <main class="container" id="main" tabindex="-1">
+    <section class="profile" id="about" aria-labelledby="profile-title" tabindex="-1">
+      <div class="profile-intro">
+        <h1 id="profile-title">LIfengWang666</h1>
+        <p class="profile-field">Networking and Distributed Computing</p>
+        <p>I study how network protocols support everyday applications and how distributed systems divide work across machines. I use small implementations and packet traces to connect what I observe with what each protocol specifies.</p>
       </div>
-
-      <figure class="request-figure">
-        <div class="figure-diagram" role="img" aria-label="A browser can use a DNS resolver to find an address and then use HTTPS to reach GitHub Pages.">
-          <div class="plot-row" aria-hidden="true">
-            <span class="plot-node">Browser</span>
-            <span class="plot-link"><span>DNS lookup</span><span class="plot-line"></span></span>
-            <span class="plot-node">Resolver</span>
-          </div>
-          <div class="plot-row" aria-hidden="true">
-            <span class="plot-node">Browser</span>
-            <span class="plot-link"><span>HTTPS</span><span class="plot-line"></span></span>
-            <span class="plot-node plot-node-accent">Pages</span>
-          </div>
-        </div>
-        <figcaption>DNS resolves the name. HTTPS serves the page.</figcaption>
-      </figure>
+      <aside class="profile-details" aria-labelledby="profile-links">
+        <h2 id="profile-links">Profile</h2>
+        <a href="https://github.com/LIfengWang666">GitHub <span aria-hidden="true">↗</span></a>
+      </aside>
     </section>
 
-    <section class="interests" id="interests" aria-labelledby="interests-title">
-      <h2 id="interests-title">What I’m studying</h2>
-      <div class="interest-grid">
+    <section class="section" id="interests" aria-labelledby="interests-title" tabindex="-1">
+      <h2 id="interests-title">Academic interests</h2>
+      <div class="interests-list">
         <article class="interest">
-          <h3>Network protocols</h3>
-          <p>How DNS resolves names, what TCP and UDP offer an application, and how a packet capture can help explain a connection.</p>
+          <h3>Computer networking</h3>
+          <p>DNS resolution, TCP and UDP, and the packet exchanges behind an HTTPS request.</p>
         </article>
         <article class="interest">
-          <h3>Distributed data processing</h3>
-          <p>How MapReduce groups data by key, and how Hadoop and Spark distribute storage and computation across machines.</p>
+          <h3>Distributed computing</h3>
+          <p>Key-based aggregation with MapReduce, distributed storage in HDFS, and data processing with Hadoop and Spark.</p>
         </article>
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div>
-        <h2 id="contact-title">Find me on GitHub</h2>
-        <p>Visit my public profile for my work on GitHub.</p>
-      </div>
-      <a class="profile-link" href="https://github.com/LIfengWang666">@LIfengWang666 <span aria-hidden="true">↗</span></a>
+    <section class="section contact" id="contact" aria-labelledby="contact-title" tabindex="-1">
+      <h2 id="contact-title">Contact</h2>
+      <p>Find my public projects through my <a href="https://github.com/LIfengWang666">GitHub profile</a>.</p>
     </section>
   </main>
 
-  <footer class="wrap site-footer">
+  <footer class="container page-footer">
     <p>LIfengWang666</p>
     <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
   </footer>
