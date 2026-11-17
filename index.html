@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lifeng Wang studies data science at XJTLU. Explore his work in array signal processing, millimetre-wave radar and data engineering.">
-  <title>Lifeng Wang | Research and Engineering</title>
+  <meta name="description" content="Lifeng Wang's personal site with radar research, interactive signal demonstrations, travel photos and value investing.">
+  <title>Lifeng Wang | Research, travel and projects</title>
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
@@ -13,14 +13,12 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="shell site-header" id="top">
-    <a class="brand" href="#top">
-      <img src="assets/favicon.png" width="34" height="34" alt="">
-      <span>Lifeng Wang</span>
-    </a>
+    <a class="brand" href="#top" aria-label="Lifeng Wang, top"><span aria-hidden="true">LW<span>.</span></span></a>
     <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" hidden>Menu</button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="#research">Research</a>
-      <a href="#experience">Experience</a>
+      <a href="#travel">Travel</a>
+      <a href="#investing">Investing</a>
       <a href="#about">About</a>
     </nav>
     <a class="header-link" href="https://github.com/LIfengWang666">GitHub <span aria-hidden="true">↗</span></a>
@@ -28,82 +26,145 @@
 
   <main class="shell" id="main" tabindex="-1">
     <section class="hero" aria-labelledby="name">
-      <h1 id="name">Lifeng <span>Wang</span></h1>
-      <div class="hero-intro">
-        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> DATA SCIENCE AT XJTLU</p>
-        <p class="intro">Research in radar sensing &amp; signal processing.</p>
-        <p class="intro-note">I study how antenna arrays estimate where signals come from and how radar can measure movement without contact.</p>
-        <a class="primary-link" href="#research">Explore my research <span aria-hidden="true">↓</span></a>
-      </div>
-
-      <figure class="signal-card" aria-labelledby="signal-title">
-        <div class="signal-head">
-          <h2 id="signal-title">Array response</h2>
-          <span class="signal-type">SIMULATION</span>
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> DATA SCIENCE AT XJTLU</p>
+        <h1 id="name">Hi, I’m <span>Lifeng Wang.</span></h1>
+        <p>I work on radar and the maths behind it. Away from the lab, I take photos when I travel and build tools around my interest in value investing.</p>
+        <div class="hero-actions">
+          <a class="pill pill-dark" href="#research">Explore the lab <span aria-hidden="true">↓</span></a>
+          <a class="pill" href="#travel">See the postcards <span aria-hidden="true">↗</span></a>
         </div>
-        <canvas id="response-plot" width="640" height="244" role="img" aria-label="Simulated eight-element antenna array response" hidden></canvas>
-        <p class="plot-note" id="plot-note">A linear antenna array responds most strongly when its steering angle matches the direction of a signal.</p>
-        <div class="signal-control" id="signal-control" hidden>
-          <label for="source-angle">Source angle</label>
-          <input id="source-angle" type="range" min="-60" max="60" step="1" value="24">
-          <output id="angle-value" for="source-angle">+24°</output>
+      </div>
+      <div class="radar-doodle" aria-hidden="true">
+        <div class="radar-orbit orbit-one"></div>
+        <div class="radar-orbit orbit-two"></div>
+        <div class="radar-orbit orbit-three"></div>
+        <span class="radar-star star-one">✦</span>
+        <span class="radar-star star-two">✧</span>
+        <span class="radar-star star-three">✦</span>
+        <div class="radar-face"><i></i><i></i><b></b></div>
+        <div class="radar-foot"></div>
+      </div>
+    </section>
+
+    <section class="shelf" id="research" aria-labelledby="research-title" tabindex="-1">
+      <div class="section-title">
+        <span class="section-symbol research-symbol" aria-hidden="true">✳</span>
+        <h2 id="research-title">Things I’m researching</h2>
+      </div>
+
+      <div class="research-grid">
+        <article class="card whiteboard-card">
+          <img class="card-image" src="assets/research-whiteboard.webp" width="960" height="1280" alt="My research whiteboard with array-processing equations and a sketch of a spatial spectrum" decoding="async">
+          <div class="card-copy">
+            <p class="eyebrow">LAB NOTES</p>
+            <h3>At the whiteboard</h3>
+            <p>I sketch antenna models and spectra before I turn them into code. My undergraduate projects have used FMCW radar for ranging and for non-contact respiration and heartbeat sensing.</p>
+          </div>
+        </article>
+
+        <article class="card paper-card">
+          <a class="figure-link" href="assets/doa-sigmoid-label.png">
+            <img class="card-image" src="assets/doa-sigmoid-label.png" width="3600" height="1440" alt="Two Sigmoid steps and the corresponding derivative peaks at the source angles" decoding="async">
+            <span class="figure-tag">View figure <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="card-copy">
+            <p class="eyebrow">SUBMITTED TO ICASSP 2027</p>
+            <h3>Where did that signal come from?</h3>
+            <p>My CNN–Transformer project uses sigmoid labels and derivative peaks to estimate directions between grid points.</p>
+            <div class="text-links">
+              <a href="https://github.com/LIfengWang666/sigmoid-doa">Research code and figures <span aria-hidden="true">↗</span></a>
+              <a href="https://2027.ieeeicassp.org/">Conference site <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card demo-card">
+          <div class="card-copy demo-copy">
+            <p class="eyebrow">INTERACTIVE DEMO</p>
+            <h3>Steer an antenna array</h3>
+            <p>Move the slider to change where the signal comes from. The peak shows where the eight-element array responds most strongly.</p>
+            <p class="demo-note">One simulated source. Half-wavelength sensor spacing.</p>
+          </div>
+          <figure class="signal-card" aria-label="Antenna array simulation">
+            <canvas id="response-plot" width="640" height="244" role="img" aria-label="Simulated eight-element antenna array response" hidden></canvas>
+            <p class="plot-note" id="plot-note">The response peaks when the steering angle matches the direction of the source.</p>
+            <div class="signal-control" id="signal-control" hidden>
+              <label for="source-angle">Source angle</label>
+              <input id="source-angle" type="range" min="-60" max="60" step="1" value="24">
+              <output id="angle-value" for="source-angle">+24°</output>
+            </div>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="shelf" id="travel" aria-labelledby="travel-title" tabindex="-1">
+      <div class="section-title">
+        <span class="section-symbol travel-symbol" aria-hidden="true">✈</span>
+        <h2 id="travel-title">Postcards I brought home</h2>
+      </div>
+      <div class="postcards" id="postcards">
+        <a class="postcard" href="assets/japan-tokyo.webp" data-title="Japan · Tokyo Tower">
+          <img src="assets/japan-tokyo.webp" width="960" height="1280" alt="The illuminated Tokyo Tower between dark buildings at night" loading="lazy" decoding="async">
+          <span class="postcard-copy"><span><strong>Japan</strong><small>Tokyo Tower at night</small></span><span class="card-arrow" aria-hidden="true">↗</span></span>
+        </a>
+        <a class="postcard" href="assets/vietnam-bay.webp" data-title="Vietnam · Boats and limestone cliffs">
+          <img src="assets/vietnam-bay.webp" width="1280" height="960" alt="Tour boats on green water below limestone cliffs in Vietnam" loading="lazy" decoding="async">
+          <span class="postcard-copy"><span><strong>Vietnam</strong><small>Boats and limestone cliffs</small></span><span class="card-arrow" aria-hidden="true">↗</span></span>
+        </a>
+        <a class="postcard" href="assets/hong-kong-harbour.webp" data-title="Hong Kong · A view from the water">
+          <img src="assets/hong-kong-harbour.webp" width="960" height="1280" alt="Hong Kong harbour skyline viewed from a boat on a clear day" loading="lazy" decoding="async">
+          <span class="postcard-copy"><span><strong>Hong Kong</strong><small>A view from the water</small></span><span class="card-arrow" aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+
+      <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="photo-title">
+        <div class="photo-dialog-top">
+          <h3 id="photo-title">Travel photo</h3>
+          <form method="dialog"><button class="pill" type="submit" autofocus>Close <span aria-hidden="true">×</span></button></form>
         </div>
-        <figcaption>Eight elements at half-wavelength spacing</figcaption>
-      </figure>
-
+        <div id="photo-preview"></div>
+        <div class="photo-dialog-actions">
+          <button class="pill" id="previous-photo" type="button">← Previous</button>
+          <button class="pill" id="next-photo" type="button">Next →</button>
+        </div>
+      </dialog>
     </section>
 
-    <section class="portfolio-section" id="research" aria-labelledby="research-title" tabindex="-1">
-      <div class="section-intro">
-        <h2 id="research-title">Selected research</h2>
+    <section class="shelf" id="investing" aria-labelledby="investing-title" tabindex="-1">
+      <div class="section-title">
+        <span class="section-symbol value-symbol" aria-hidden="true">✦</span>
+        <h2 id="investing-title">Away from the lab</h2>
       </div>
-      <div class="entries">
-        <article class="entry">
-          <div class="entry-meta"><span>ARRAY SIGNAL PROCESSING</span><span class="status">Submitted to ICASSP 2027</span></div>
-          <h3>High-resolution direction-of-arrival estimation</h3>
-          <p>As sole first author, I proposed sigmoid label encoding for a CNN–Transformer and used derivatives of the network output to locate angles between training grid points.</p>
-          <a class="text-link" href="https://github.com/LIfengWang666/sigmoid-doa">Sigmoid DOA repository <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="entry">
-          <div class="entry-meta"><span>UNDERGRADUATE RESEARCH</span><time datetime="2026">2026</time></div>
-          <h3>Non-contact vital sign monitoring</h3>
-          <p>I adapted an FMCW radar platform for respiration and heartbeat sensing and compared measurements from repeated trials with reference measurements.</p>
-        </article>
-        <article class="entry">
-          <div class="entry-meta"><span>UNDERGRADUATE RESEARCH</span><time datetime="2025">2025</time></div>
-          <h3>Target detection with millimetre-wave radar</h3>
-          <p>I set up the experimental environment, processed radar echoes in MATLAB and validated FFT-based ranging.</p>
-        </article>
-      </div>
+      <article class="card investing-card">
+        <div class="investing-illustration" aria-hidden="true">
+          <div class="illustration-window">
+            <span>● ● ●</span>
+            <div class="illustration-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <div class="card-copy">
+          <p class="eyebrow">VALUE INVESTING</p>
+          <h3>My own trading platform</h3>
+          <p>Value investing interests me because it starts with understanding a business. I also build my own trading platform, a personal software project alongside that interest.</p>
+        </div>
+      </article>
     </section>
 
-    <section class="portfolio-section" id="experience" aria-labelledby="experience-title" tabindex="-1">
-      <div class="section-intro">
-        <h2 id="experience-title">Experience</h2>
+    <section class="shelf" id="about" aria-labelledby="about-title" tabindex="-1">
+      <div class="section-title">
+        <span class="section-symbol about-symbol" aria-hidden="true">✺</span>
+        <h2 id="about-title">A little more about me</h2>
       </div>
-      <div class="entries">
-        <article class="entry">
-          <div class="entry-meta"><span>CHINA MOBILE</span><span>May to Aug 2026</span></div>
-          <h3>Cybersecurity intern</h3>
-          <p>I supported network security operations, reviewed traffic alerts and helped document risk assessments.</p>
+      <div class="about-grid">
+        <article class="card card-copy">
+          <h3>Education</h3>
+          <p>I study Data Science and Big Data Technology, and Innovation and Entrepreneurship, at Xi’an Jiaotong-Liverpool University.</p>
         </article>
-        <article class="entry">
-          <div class="entry-meta"><span>SHANGHAI WEIQU NETWORK TECHNOLOGY</span><span>Oct 2025 to Feb 2026</span></div>
-          <h3>Data analyst intern</h3>
-          <p>I built upload and task-status workflows for document processing and integrated OCR and MongoDB GridFS storage.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="portfolio-section" id="about" aria-labelledby="about-title" tabindex="-1">
-      <div class="section-intro">
-        <h2 id="about-title">About me</h2>
-      </div>
-      <div class="entries">
-        <article class="entry">
-          <div class="entry-meta"><span>EDUCATION</span><span>2024 to 2028 (expected)</span></div>
-          <h3>Xi'an Jiaotong-Liverpool University</h3>
-          <p>Undergraduate studies in Data Science and Big Data Technology and in Innovation and Entrepreneurship.</p>
+        <article class="card card-copy">
+          <h3>Experience</h3>
+          <p>I worked on network security operations at China Mobile and document-processing workflows at Shanghai Weiqu Network Technology.</p>
         </article>
       </div>
     </section>

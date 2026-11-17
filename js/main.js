@@ -149,3 +149,48 @@ if (context) {
   window.addEventListener('resize', drawResponse);
   drawResponse();
 }
+
+// The postcards remain direct image links without the dialog or JavaScript.
+const postcards = Array.from(document.querySelectorAll('.postcard'));
+const photoDialog = document.getElementById('photo-dialog');
+const photoTitle = document.getElementById('photo-title');
+const photoPreview = document.getElementById('photo-preview');
+let currentPhoto = 0;
+let opener = null;
+
+function showPhoto(index) {
+  currentPhoto = (index + postcards.length) % postcards.length;
+  const postcard = postcards[currentPhoto];
+  const preview = new Image();
+  preview.src = postcard.href;
+  preview.alt = postcard.querySelector('img').alt;
+  photoTitle.textContent = postcard.dataset.title;
+  photoPreview.replaceChildren(preview);
+}
+
+if (typeof photoDialog.showModal === 'function') {
+  postcards.forEach((postcard, index) => {
+    postcard.addEventListener('click', (event) => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
+        return;
+      }
+      event.preventDefault();
+      opener = postcard;
+      showPhoto(index);
+      photoDialog.showModal();
+    });
+  });
+
+  document.getElementById('previous-photo').addEventListener('click', () => showPhoto(currentPhoto - 1));
+  document.getElementById('next-photo').addEventListener('click', () => showPhoto(currentPhoto + 1));
+  photoDialog.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      const direction = event.key === 'ArrowLeft' ? -1 : 1;
+      showPhoto(currentPhoto + direction);
+      event.preventDefault();
+    }
+  });
+  photoDialog.addEventListener('close', () => {
+    opener.focus({ preventScroll: true });
+  });
+}

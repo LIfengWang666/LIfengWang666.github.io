@@ -1,6 +1,6 @@
 # Lifeng Wang
 
-My academic portfolio covers research in antenna arrays and radar, engineering experience, and undergraduate studies at XJTLU.
+My personal site covers radar and antenna-array research, travel photography, value investing and education at XJTLU.
 
 ## Run locally
 
@@ -20,8 +20,15 @@ assets/
 README.md
 ~~~
 
-The HTML defines the profile and links. The CSS defines typography and the responsive layout. The script adds the narrow-screen menu and draws the antenna-array simulation using the Canvas 2D API. The profile and its links are available with JavaScript disabled.
+The HTML defines the chapters, images and links. The CSS defines the responsive card layout, typography and CSS illustrations. The script controls the narrow-screen menu, the photo dialog and the antenna-array simulation. With JavaScript disabled, chapter navigation and direct photo links remain available.
 
 The simulation displays normalised power for an ideal eight-element uniform linear array with half-wavelength spacing. The source angle is adjustable. The plot displays values down to −30 dB.
 
 For GitHub Pages, place the files at the root of the user-site repository and configure Pages to deploy from the main branch and repository root.
+
+## Credits
+
+- The cover and grouped project cards are inspired by [Nicky Case's site](https://ncase.me/).
+- The whiteboard and travel photographs are by Lifeng Wang. The WebP copies contain no camera metadata.
+- The Sigmoid label plot is from the public [Sigmoid DOA repository](https://github.com/LIfengWang666/sigmoid-doa/blob/main/figures/fig1_label.png).
+- Bricolage Grotesque and Instrument Sans are distributed under their bundled SIL Open Font Licenses.
