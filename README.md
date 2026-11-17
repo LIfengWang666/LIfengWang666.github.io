@@ -1,7 +1,27 @@
-# Academic profile for LIfengWang666
+# Lifeng Wang
 
-This English-language page presents my academic interests and a selected study on HTTPS deployment and measurement. It follows the Week 6 lab structure with HTML for content, CSS for presentation, JavaScript for the narrow-screen menu, and a local favicon. The navigation links remain available when scripts are disabled.
+My academic portfolio covers research in antenna arrays and radar, engineering experience, and undergraduate studies at XJTLU.
 
-Run `python -m http.server 8000` from this directory to preview the page at `http://localhost:8000`. For GitHub Pages, publish these files from the root of the user-site repository.
+## Run locally
 
-The favicon was made for this page. All resources are served from the site.
+Run from this directory and open http://127.0.0.1:8000/.
+
+~~~sh
+python -m http.server 8000 --bind 127.0.0.1
+~~~
+
+The files follow the Week 6 lab layout for a GitHub Pages user site.
+
+~~~text
+index.html
+css/style.css
+js/main.js
+assets/
+README.md
+~~~
+
+The HTML defines the profile and links. The CSS defines typography and the responsive layout. The script adds the narrow-screen menu and draws the antenna-array simulation using the Canvas 2D API. The profile and its links are available with JavaScript disabled.
+
+The simulation displays normalised power for an ideal eight-element uniform linear array with half-wavelength spacing. The source angle is adjustable. The plot displays values down to −30 dB.
+
+For GitHub Pages, place the files at the root of the user-site repository and configure Pages to deploy from the main branch and repository root.
