@@ -73,11 +73,11 @@ button, input {
   padding: 0.45rem 0.7rem;
   border: var(--border);
   background: var(--surface);
-  transform: translateY(-200%);
+  clip-path: inset(50%);
 }
 
 .skip-link:focus {
-  transform: translateY(0);
+  clip-path: none;
 }
 
 .shell {
@@ -641,6 +641,33 @@ button, input {
 .illustration-chart i:nth-child(6) { height: 75%; }
 .illustration-chart i:nth-child(7) { height: 61%; }
 
+.holdings-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: 1.1rem;
+  margin-top: 1.15rem;
+  background: var(--lavender);
+}
+
+.holdings-card .pill {
+  margin-top: 0.9rem;
+}
+
+.holdings-figure {
+  padding: 0.55rem;
+  border-left: var(--border);
+  background: #0a1020;
+}
+
+.holdings-figure img {
+  display: block;
+  width: min(100%, 26rem);
+  height: auto;
+  margin-inline: auto;
+  border-radius: 0.6rem;
+}
+
 .site-footer {
   justify-content: space-between;
   gap: 0.7rem 1rem;
@@ -675,8 +702,17 @@ button, input {
     width: 100%;
   }
 
-  .hero, .research-grid, .about-grid, .demo-card, .investing-card {
+  .hero, .research-grid, .about-grid, .demo-card, .investing-card, .holdings-card {
     grid-template-columns: 1fr;
+  }
+
+  .holdings-card {
+    gap: 0;
+  }
+
+  .holdings-figure {
+    border-top: var(--border);
+    border-left: 0;
   }
 
   .hero {

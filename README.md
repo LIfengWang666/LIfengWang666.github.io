@@ -31,4 +31,5 @@ For GitHub Pages, place the files at the root of the user-site repository and co
 - The cover and grouped project cards are inspired by [Nicky Case's site](https://ncase.me/).
 - The whiteboard and travel photographs are by Lifeng Wang. The WebP copies contain no camera metadata.
 - The Sigmoid label plot is from the public [Sigmoid DOA repository](https://github.com/LIfengWang666/sigmoid-doa/blob/main/figures/fig1_label.png).
+- The personal holdings poster uses an English localisation of the poster provided by Lifeng Wang.
 - Bricolage Grotesque and Instrument Sans are distributed under their bundled SIL Open Font Licenses.
