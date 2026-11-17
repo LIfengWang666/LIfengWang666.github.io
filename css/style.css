@@ -298,8 +298,33 @@ button, input {
 }
 
 .star-one { top: 8%; left: 18%; color: #6846a4; }
-.star-two { top: 15%; right: 12%; color: #955719; }
 .star-three { bottom: 14%; right: 8%; color: #6846a4; }
+
+.orbit-ball {
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  right: 12%;
+  width: 10%;
+  aspect-ratio: 1;
+  border: var(--border);
+  border-radius: 50%;
+  background: linear-gradient(#ef827b 46%, var(--ink) 46% 54%, var(--surface) 54%);
+  box-shadow: 2px 2px 0 var(--ink);
+  transform: rotate(-18deg);
+}
+
+.orbit-ball::after {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 30%;
+  aspect-ratio: 1;
+  border: var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  content: "";
+  transform: translate(-50%, -50%);
+}
 
 /* Research cards and antenna simulation */
 .shelf {
